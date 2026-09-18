@@ -1,0 +1,6 @@
+{
+  "name": "Venda de Apartamentos",
+  "description": "Landing page exclusiva para venda de apartamentos de alto padrão com plantas modernas, lazer completo e condições especiais de lançamento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
