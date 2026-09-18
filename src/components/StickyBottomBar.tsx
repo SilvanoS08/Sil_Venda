@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, Sparkles, X } from 'lucide-react';
 import { INTEREST_FORM_URL } from '../data/apartmentData';
+import { trackInterestClick } from '../utils/analytics';
 
 export const StickyBottomBar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,6 +53,7 @@ export const StickyBottomBar: React.FC = () => {
             href={INTEREST_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackInterestClick('sticky_bottom_bar')}
             className="inline-flex items-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/20 hover:scale-105 active:scale-95 transition-all"
           >
             <span>Tenho interesse</span>

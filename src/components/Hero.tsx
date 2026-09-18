@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, CheckCircle2, ShieldCheck, MapPin, Eye, Sparkles } from 'lucide-react';
 import { INTEREST_FORM_URL } from '../data/apartmentData';
+import { trackInterestClick } from '../utils/analytics';
 
 export const Hero: React.FC = () => {
   return (
@@ -53,6 +54,7 @@ export const Hero: React.FC = () => {
               href={INTEREST_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackInterestClick('hero_section')}
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-bold text-lg shadow-xl shadow-amber-500/25 hover:shadow-amber-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 group"
             >
               <span>Tenho interesse</span>
